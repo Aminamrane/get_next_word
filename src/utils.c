@@ -7,10 +7,36 @@ char find_space(char *s){
 
     int index = 0;
 
-    while (s[index] != ' ') {
+    while (s[index] && s[index] != ' ') {
             index++;
     } 
 
     return index;
+
+}
+
+char *extract_word(char *s) {
+    
+    char *word;
+    int index;
+    int i = 0;
+    index = find_space(s);
+
+
+    word = malloc(index + 1);
+
+    if (!word) {
+        return NULL;
+    }
+    
+
+    while (i < index) {
+        word[i] = s[i];
+        i++; 
+    }
+
+    word[index] = '\0';
+
+    return word;
 
 }
