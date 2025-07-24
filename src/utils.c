@@ -40,3 +40,26 @@ char *extract_word(char *s) {
     return word;
 
 }
+
+int str_len(char *s){
+
+    int i = 0;
+
+    if(!s) {
+        return 0;
+    }
+
+    while(s[i]) {
+        i++;
+    }
+
+    return i;
+
+}
+
+char *left_over(char *s) {
+
+    char *clean_rest;
+
+
+}
